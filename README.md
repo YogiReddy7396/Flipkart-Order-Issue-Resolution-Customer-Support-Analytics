@@ -1,103 +1,202 @@
-# Flipkart Order Issue Resolution & Customer Support Analytics
+# 📊 Flipkart Order Issue Resolution & Customer Support Analytics
 
-## Project Overview
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pandas-Data%20Processing-150458?style=for-the-badge&logo=pandas&logoColor=white" />
+  <img src="https://img.shields.io/badge/Google%20Colab-Development%20Environment-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white" />
+  <img src="https://img.shields.io/badge/Domain-Data%20Analytics-00897B?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Completed-2E8B57?style=for-the-badge" />
+</p>
 
-This project focuses on analyzing e-commerce order issues, including delayed deliveries, refund problems, and customer complaints.
+---
 
-The objective is to combine order, refund, and customer complaint datasets into a single order-level investigation report to help customer support teams identify issues and prioritize orders that require attention.
+## 📌 Project Overview
 
-The project was developed using Python, Pandas, and Google Colab.
+**Flipkart Order Issue Resolution & Customer Support Analytics** is a Python-based data analytics project focused on identifying and analyzing e-commerce order issues, including delivery delays, refund problems, and customer complaints.
 
-## Business Problem
+The project integrates order, refund, and customer complaint records into a consolidated order-level investigation report. It applies predefined business rules to identify problematic orders and classify them into support priority levels.
 
-Order details, refund records, and customer complaints are maintained in separate datasets. This makes it difficult for customer support teams to investigate customer issues efficiently.
+The objective is to help customer support teams investigate order-related issues more efficiently and identify cases that require attention.
 
-This project integrates these datasets, identifies potential order-related problems, and assigns support priorities using predefined business rules.
+## 🎯 Business Problem
 
-## Project Objectives
+E-commerce support teams often need to examine multiple datasets to understand customer issues. Order details, refund records, and customer complaints are maintained separately, making investigation time-consuming.
 
-- Clean and validate order, refund, and customer complaint datasets.
-- Identify duplicate records, missing values, and inconsistent data.
-- Analyze delivery delays and refund issues.
-- Identify repeated customer complaints.
-- Combine multiple datasets into a consolidated order-level report.
-- Classify orders into High, Medium, and Low support priorities.
-- Generate CSV and Excel reports for further analysis.
+This project addresses the problem by:
 
-## Tools & Technologies
+- Combining information from multiple datasets.
+- Identifying delivery, refund, and complaint-related issues.
+- Highlighting orders that require further investigation.
+- Assigning support priority levels based on identified issues.
+- Providing consolidated reports for support operations.
 
-- **Programming Language:** Python
-- **Libraries:** Pandas, NumPy
-- **Environment:** Google Colab
-- **Data Formats:** CSV, Excel, JSON
-- **Techniques:** Data Cleaning, Data Validation, Data Aggregation, Data Integration, Rule-Based Classification
+## 🚀 Project Objectives
 
-## Project Workflow
+- Load and inspect order, refund, and customer complaint datasets.
+- Clean and validate records by handling duplicates, inconsistent values, and missing data.
+- Calculate delivery delays using promised and actual delivery dates.
+- Analyze refund amounts, refund counts, and pending or failed refunds.
+- Identify repeated and open customer complaints.
+- Integrate the cleaned datasets using a common order identifier.
+- Identify issue indicators and classify support priorities.
+- Generate final analytical reports in CSV and Excel formats.
 
-1. **Data Loading and Inspection** – Loaded and inspected orders, refunds, and customer complaint datasets.
-2. **Data Cleaning and Validation** – Removed duplicates, standardized status values, converted data types, and checked missing values.
-3. **Delivery Delay Analysis** – Calculated delivery delays using actual and promised delivery dates.
-4. **Refund Analysis** – Aggregated refund counts, refund amounts, and pending or failed refunds.
-5. **Complaint Analysis** – Analyzed complaint counts and open complaints for each order.
-6. **Data Integration** – Combined the cleaned datasets using the common `order_id`.
-7. **Issue Identification** – Created indicators for delivery delays, refund issues, and repeated complaints.
-8. **Priority Classification** – Assigned High, Medium, and Low priorities based on the number of issue indicators.
-9. **Report Generation** – Created a final order investigation report and priority summary.
-10. **Exporting Results** – Exported the final outputs into CSV and Excel formats.
+## 🛠️ Tools & Technologies
 
-## Priority Classification
-
-| Priority | Business Rule |
+| Technology | Application |
 |---|---|
-| High | Two or more issue indicators |
-| Medium | Exactly one issue indicator |
-| Low | No issue indicators |
+| Python | Data processing and analysis |
+| Pandas | Data cleaning, transformation, aggregation, and merging |
+| NumPy | Numerical operations |
+| Google Colab | Notebook development and execution |
+| CSV | Order-level report export |
+| Excel | Priority summary export |
+| JSON | Customer complaint data input |
 
-The classification is rule-based and is intended to support customer support investigations.
+## ⚙️ Project Workflow
 
-## Key Findings
+**1. Data Loading & Inspection**
+- Loaded orders, refunds, and customer complaint datasets.
+- Inspected dataset dimensions, columns, data types, and missing values.
 
-- **1,600** unique orders analyzed.
-- **234** high-priority orders identified.
-- **234** orders delivered more than three days late.
-- **540** orders had pending or failed refunds.
-- **405** orders had multiple complaints.
-- **487** orders had missing actual delivery dates.
+**2. Data Cleaning & Validation**
+- Identified and removed duplicate records.
+- Standardized inconsistent status values.
+- Converted date and numerical columns into appropriate data types.
+- Validated records and identified unmatched order IDs.
 
-*Note: Issue categories can overlap, so their counts should not be added together.*
+**3. Delivery Delay Analysis**
+- Calculated delivery delay days using actual and promised delivery dates.
+- Identified orders delivered more than three days late.
 
-## Final Deliverables
+**4. Refund Analysis**
+- Aggregated refund records at the order level.
+- Calculated refund counts and total refund amounts.
+- Identified orders with pending or failed refunds.
 
-- Consolidated order-level investigation report.
-- Support priority summary.
-- CSV report: `flipkart_order_issue_report.csv`
-- Excel summary: `flipkart_issue_summary.xlsx`
+**5. Customer Complaint Analysis**
+- Aggregated complaint records by order.
+- Calculated complaint counts and open complaint counts.
+- Identified orders with repeated complaints.
 
-## Repository Contents
+**6. Data Integration**
+- Combined cleaned order, refund, and complaint information.
+- Created a consolidated order-level investigation dataset.
 
-- `Flipkart_Order_Issue_Resolution_Analytics.ipynb` – Complete project notebook.
-- `README.md` – Project documentation.
+**7. Issue Identification**
+- Created indicators for delayed deliveries, refund issues, and repeated complaints.
+- Calculated the total number of issue indicators for each order.
 
-The original input datasets are not included in this repository.
+**8. Support Priority Classification**
+- Assigned High, Medium, and Low priorities using predefined business rules.
 
-## How to Run the Project
+**9. Report Generation**
+- Prepared the final order investigation report.
+- Generated a summary of support priority levels.
 
-1. Open the project notebook in Google Colab.
-2. Upload the required input datasets:
-   - `orders.csv`
-   - `refunds.xlsx`
-   - `customer_complaints.json`
-3. Execute the notebook cells in sequence.
-4. Review the cleaned datasets, analysis results, and priority classification.
-5. Generate the final CSV and Excel reports.
+**10. Exporting Results**
+- Exported the final analytical outputs into CSV and Excel formats.
 
-## Learning Outcomes
+## 📊 Support Priority Classification
+
+Orders are classified based on the number of identified issue indicators.
+
+| Priority | Classification Rule |
+|---|---|
+| 🔴 High | Two or more issue indicators |
+| 🟡 Medium | Exactly one issue indicator |
+| 🟢 Low | No issue indicators |
+
+This is a rule-based classification approach designed to help support teams identify orders requiring attention. It does not use a machine learning classification model.
+
+## 📈 Key Findings
+
+The analysis identified the following results across 1,600 unique orders:
+
+| Business Metric | Result |
+|---|---:|
+| Total Unique Orders | 1,600 |
+| High-Priority Orders | 234 |
+| Orders Delayed by More Than 3 Days | 234 |
+| Orders with Pending or Failed Refunds | 540 |
+| Orders with Multiple Complaints | 405 |
+| Missing Actual Delivery Dates | 487 |
+
+**Business Insight:** Delivery delays, refund issues, and repeated complaints highlight different areas requiring customer support attention. The priority classification helps organize orders for further investigation.
+
+*Note: These issue categories can overlap, so their counts should not be added together.*
+
+## 📁 Repository Structure
+
+```text
+Flipkart-Order-Issue-Resolution-Customer-Support-Analytics/
+│
+├── Flipkart_Order_Issue_Resolution_Analytics.ipynb
+│
+├── outputs/
+│   ├── flipkart_order_issue_report.csv
+│   └── flipkart_issue_summary.xlsx
+│
+└── README.md
+```
+
+## 📦 Project Deliverables
+
+The repository includes the following final analytical outputs:
+
+| File | Description |
+|---|---|
+| `Flipkart_Order_Issue_Resolution_Analytics.ipynb` | Complete project implementation and analysis |
+| `flipkart_order_issue_report.csv` | Consolidated order-level investigation report |
+| `flipkart_issue_summary.xlsx` | Support priority summary in Excel format |
+
+### View Project Outputs
+
+- 📄 [View Final Order Issue Report (CSV)](outputs/flipkart_order_issue_report.csv)
+- 📊 [Download Priority Summary (Excel)](outputs/flipkart_issue_summary.xlsx)
+- 📓 [Open Project Notebook](Flipkart_Order_Issue_Resolution_Analytics.ipynb)
+
+*GitHub can preview the CSV report directly. The Excel file can be downloaded and opened in Microsoft Excel.*
+
+## 📂 Dataset Availability
+
+The original input datasets are not included in this repository:
+
+- `orders.csv`
+- `refunds.xlsx`
+- `customer_complaints.json`
+
+Only the final analytical output files are provided in the `outputs` folder.
+
+The datasets used in this project contain fictional training records and do not represent actual Flipkart customer transactions.
+
+To reproduce the analysis, the required input datasets must be obtained separately and uploaded to the Google Colab environment.
+
+## ▶️ How to Run the Project
+
+1. Open the project notebook using Google Colab.
+2. Obtain the three required input datasets.
+3. Upload the datasets to the Colab environment using their original filenames.
+4. Execute the notebook cells in the given sequence.
+5. Review the data cleaning, validation, analysis, and priority classification results.
+6. Generate the final CSV and Excel reports.
+
+## 🎓 Learning Outcomes
 
 Through this project, I gained practical experience in:
 
-- Data cleaning and preprocessing using Pandas.
+- Data cleaning and preprocessing using Python and Pandas.
 - Data validation and handling missing values.
-- Grouping and aggregating datasets.
-- Merging multiple datasets using common keys.
-- Applying business rules to identify and classify issues.
-- Generating analytical reports using Python.
+- Data aggregation using grouping operations.
+- Integrating multiple datasets using common keys.
+- Applying business rules to identify order-related issues.
+- Creating rule-based support priority classifications.
+- Generating structured analytical reports using CSV and Excel.
+
+---
+
+<p align="center">
+  <b>Thank you for visiting my project!</b>
+  <br/>
+  <i>Building practical data analytics solutions to support better business decisions.</i>
+</p>
